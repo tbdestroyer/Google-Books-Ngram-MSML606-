@@ -10,11 +10,6 @@ import time
 import hashMapADT as hm  # My own hashmap ADT with linear probing
 
 # external‑source policy:
-# Used my own code and logic to build the hashmap class
-# This is the hash table code mostly from HW3 with some changes
-# Used Github CoPilot to help with python syntax
-
-# external‑source policy:
 # Used my code and logic for reading the file and cleaning the
 # Ngram entries and counting match and vlume frequencies. 
 # Used Copilot for some parts of this application
