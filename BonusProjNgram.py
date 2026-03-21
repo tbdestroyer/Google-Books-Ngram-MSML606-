@@ -137,6 +137,5 @@ for entry in hashmap.table:
         probes_used = hashmap.total_search_probes - probes_before
         if probes_used > 1:
             print(f"Word '{key}' required {probes_used} probes to find.")
-# Example of launching the CLI
-start_cli(hashmap)
 """
+start_cli(hashmap)
