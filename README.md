@@ -27,26 +27,27 @@ The main script (`BonusProjNgram.py`) reads n-gram data from the provided sample
 
 ## Notes
 - You can modify the sample text files or add your own n-gram data for further experimentation.
-## Example Usage: 
+## Example Usage:
+```
 ==============================================
    Google Ngram Smart-Fix & Autocomplete
 ==============================================
 Type a word to search, ':metrics' for stats, or 'exit' to quit.
 
-> arrive   
-✅ Found: 'arrive'
+> arrive
+Found: 'arrive'
    Match Count: 42
    Volume Count: 42
    Lookup Time: 0.0410 ms
 
 > applause
-✅ Found: 'applause'
+Found: 'applause'
    Match Count: 854
    Volume Count: 649
    Lookup Time: 0.0433 ms
 
 > applau
-❌ 'applau' not found in dataset.
+'applau' not found in dataset.
    Searching for suggestions...
    Did you mean:
      1. applause (freq: 854)
@@ -56,9 +57,11 @@ Type a word to search, ':metrics' for stats, or 'exit' to quit.
 --- Hash Table Performance Metrics ---
 Table Size (m):           6029
 Elements Stored (n):      3155
-Load Factor (α):          0.52
+Load Factor (a):          0.52
 Avg Probes per Insert:    3.25
 Avg Probes per Search:    2.25
 --------------------------------------
+```
+
 ## Author
 - Taner Bulbul
