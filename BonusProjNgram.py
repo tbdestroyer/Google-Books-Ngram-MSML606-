@@ -15,9 +15,9 @@ import hashMapADT as hm  # My own hashmap ADT with linear probing
 # Used Copilot for some parts of this application
 # code for CLI such as emojis and formatting is from Copilot suggestions
     
-# Convert to lowercase and strip special characters
+# Convert to lowercase and strip special characters and numbers
 def clean_Ngrams(text):
-    return re.sub(r'[^a-z0-9]', '', text.lower())
+    return re.sub(r'[^a-z]', '', text.lower())
 
 def get_metrics(hashmap):
     load_factor = hashmap.n / hashmap.size_m
@@ -118,19 +118,5 @@ if __name__ == "__main__":
     for word, stats in word_stats.items():
         if stats["volume_count"] > 5:  # Only include words with significant volume
             hashmap.insert(word, stats)
-"""       
-    for entry in hashmap.table:
-        if entry is not None and entry[0] is not hashmap._TOMBSTONE:
-            print(entry[0], entry[1]["match_count"])
 
-for entry in hashmap.table:
-    if entry and entry[0] is not hashmap._TOMBSTONE:
-        key = entry[0]
-        # Reset probe count if needed
-        probes_before = hashmap.total_search_probes
-        hashmap.search(key)
-        probes_used = hashmap.total_search_probes - probes_before
-        if probes_used > 1:
-            print(f"Word '{key}' required {probes_used} probes to find.")
-"""
 start_cli(hashmap)
